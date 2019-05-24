@@ -29,6 +29,7 @@ module Caracal
               { prefix: 'xmlns:wne',  href: 'http://schemas.microsoft.com/office/word/2006/wordml'                    },
               { prefix: 'xmlns:sl',   href: 'http://schemas.openxmlformats.org/schemaLibrary/2006/main'               },
               { prefix: 'xmlns:a',    href: 'http://schemas.openxmlformats.org/drawingml/2006/main'                   },
+              { prefix: 'xmlns:asvg', href: 'http://schemas.microsoft.com/office/drawing/2016/SVG/main'               },
               { prefix: 'xmlns:pic',  href: 'http://schemas.openxmlformats.org/drawingml/2006/picture'                },
               { prefix: 'xmlns:c',    href: 'http://schemas.openxmlformats.org/drawingml/2006/chart'                  },
               { prefix: 'xmlns:lc',   href: 'http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas'           },

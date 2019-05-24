@@ -17,6 +17,7 @@ module Caracal
       def to_xml
         builder = ::Nokogiri::XML::Builder.with(declaration_xml) do |xml|
           xml.send 'Types', root_options do
+            xml.send 'Default', { 'Extension' => 'svg',  'ContentType' => 'image/svg+xml' }
             xml.send 'Default', { 'Extension' => 'gif',  'ContentType' => 'image/gif' }
             xml.send 'Default', { 'Extension' => 'jpeg', 'ContentType' => 'image/jpeg' }
             xml.send 'Default', { 'Extension' => 'jpg',  'ContentType' => 'image/jpeg' }

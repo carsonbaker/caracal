@@ -170,7 +170,19 @@ module Caracal
                         xml['pic'].cNvPicPr
                       end
                       xml['pic'].blipFill do
-                        xml['a'].blip({ 'r:embed' => rel.formatted_id })
+
+                        if model.image_url.ends_with? ".svg"
+                          xml['a'].blip do
+                            xml['a'].extLst do
+                              xml['a'].ext(uri: "{96DAC541-7B7A-43D3-8B79-37D633B846F1}") do
+                                xml['asvg'].svgBlip('r:embed': rel.formatted_id )
+                              end
+                            end
+                          end
+                        else
+                          xml['a'].blip({ 'r:embed' => rel.formatted_id })
+                        end
+
                         xml['a'].srcRect
                         xml['a'].stretch do
                           xml['a'].fillRect
