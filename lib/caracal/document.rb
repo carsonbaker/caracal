@@ -14,6 +14,7 @@ require 'caracal/core/namespaces'
 require 'caracal/core/page_breaks'
 require 'caracal/core/page_numbers'
 require 'caracal/core/page_settings'
+require 'caracal/core/raw'
 require 'caracal/core/relationships'
 require 'caracal/core/rules'
 require 'caracal/core/styles'
@@ -63,6 +64,7 @@ module Caracal
     include Caracal::Core::Tables
     include Caracal::Core::Text
 
+    include Caracal::Core::Raw
 
     #------------------------------------------------------
     # Public Class Methods

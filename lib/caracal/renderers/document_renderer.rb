@@ -98,6 +98,10 @@ module Caracal
 
       #============= MODEL RENDERERS ===========================
 
+      def render_raw(xml, model)
+        xml << model.raw_content
+      end
+
       def render_bookmark(xml, model)
         if model.start?
           xml['w'].bookmarkStart({ 'w:id' => model.bookmark_id, 'w:name' => model.bookmark_name })
